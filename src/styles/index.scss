@@ -1,0 +1,9 @@
+// CORE
+@import 'core/variables';
+
+// PAGES
+@import 'pages/login';
+
+* {
+    font-family: $font-stack;
+}

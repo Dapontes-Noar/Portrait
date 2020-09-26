@@ -1,9 +1,13 @@
 import React from 'react';
 
+// PAGES
+import { Login } from './pages'
+
+
 function App() {
   return (
     <div>
-      Hello world!
+      <Login />
     </div>
   );
 }
