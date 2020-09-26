@@ -1,15 +1,42 @@
 import React from 'react';
 
 // PAGES
-import { Login } from './pages'
+import { Login, Home } from './pages'
+
+// REACT ROUTER
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
 
-function App() {
+import { connect } from 'react-redux'
+
+
+function App({ auth }) {
   return (
-    <div>
-      <Login />
-    </div>
+    <Router>
+      <Switch>
+
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route path="/">
+          {!auth ? <Redirect to="/login" /> : <Home />}
+        </Route>
+
+
+
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+const mapState = (state) => ({
+  auth: state.login.auth,
+})
+
+export default connect(mapState)(App)

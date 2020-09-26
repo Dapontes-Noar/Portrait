@@ -1,9 +1,17 @@
 import React, { useState, useRef } from 'react';
 
-const Login = () => {
+import { connect } from 'react-redux'
+
+import Swal from 'sweetalert2'
+
+import { useHistory } from "react-router-dom";
+
+const Login = ({ error, loginAsync }) => {
 
   const mailRef = useRef();
   const passwordRef = useRef();
+
+  let history = useHistory();
 
   const [mailError, setMailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -11,7 +19,7 @@ const Login = () => {
   const [showSecret, setShowSecret] = useState(false)
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const mail = mailRef.current;
@@ -21,10 +29,43 @@ const Login = () => {
     setFormErrors(errors)
 
     if (errors.length === 0) {
-      console.log('REDUX/REMATCH LOGIC')
       setMailError(false)
       setPasswordError(false)
 
+      const user = {
+        email: mail.value,
+        password: password.value
+      }
+
+      await loginAsync(user)
+        .then(() => {
+
+          if (error) {
+            Swal.fire({
+              position: 'center',
+              icon: 'error',
+              title: error,
+              showConfirmButton: false,
+              timer: 3000
+            })
+
+            window.localStorage.setItem('logged', false)
+
+          } else {
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: `Welcome ${user['email']}`,
+              showConfirmButton: false,
+              timer: 3000
+            })
+
+            history.replace("/")
+            window.localStorage.setItem('logged', true)
+
+
+          }
+        })
     }
   }
 
@@ -110,4 +151,13 @@ const Login = () => {
   )
 };
 
-export default Login;
+
+const mapState = (state) => ({
+  ...state.login
+})
+
+const mapDispatch = (dispatch) => ({
+  loginAsync: (data) => dispatch.login.loginAsync(data),
+})
+
+export default connect(mapState, mapDispatch)(Login)
