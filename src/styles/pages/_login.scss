@@ -3,3 +3,67 @@
   width: 100vw;
   height: 100vh;
 }
+
+.bg-shapes {
+  background-image: url("../../assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+
+
+  @media (min-width: $breakpoint-laptop){ background-image: none; }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  font-size: 16px;
+
+  @media (max-width: $breakpoint-laptop){ align-items: flex-end; }
+  @media (min-width: $breakpoint-laptop){ font-size: 14px; }
+  @media (min-width: $breakpoint-tablet){ align-items: center; }
+}
+  
+.input {
+  background: $dark-color;
+  border-radius: 50px;
+  border-color: $dark-color;
+  color: $white-color;
+
+  padding: 25px 25px;
+
+  margin-bottom: 30px;
+
+  &:hover {
+    border-color: $dark-color;
+    color: $white-color;
+  }
+
+  &:focus {
+    background: $dark-color;
+    border-color:$dark-color;
+    color: $white-color;
+  }
+
+  @media (min-width: $breakpoint-laptop){
+    font-size: 14px;
+    padding: 20px 20px;
+  }
+}
+
+.spacer {
+  margin-bottom: 40%;
+  @media (min-width: $breakpoint-tablet){ margin-bottom: 20%; }
+}
+
+.password-btn {
+  top: 25%;
+  right: 11%;
+}
