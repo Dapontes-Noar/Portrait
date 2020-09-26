@@ -31,10 +31,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Learn More
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 To learn Redux, check out the [Redux documentation](https://redux.js.org/).
+
 To learn Rematch, check out the [Rematch documentation](https://rematch.netlify.app/#/).
+
 To learn Boostrap, check out the [Boostrap documentation](https://getbootstrap.com/).
+
 To learn React Router, check out the [React router documentation](https://reactrouter.com/).
+
 
 ### Deployment
 
