@@ -7,7 +7,6 @@ Based on:
 
 Available on [Heroku](https://boiling-scrubland-43866.herokuapp.com/login)
 
-
 ## Available Scripts
 
 In the project directory, you can run:
