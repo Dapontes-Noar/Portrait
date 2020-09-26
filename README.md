@@ -7,6 +7,13 @@ Based on:
 
 Available on [Heroku](https://boiling-scrubland-43866.herokuapp.com/login)
 
+```sh
+$  User test
+
+   email: 'example@mail.com',
+   password: '123456'
+
+```
 ## Available Scripts
 
 In the project directory, you can run:
