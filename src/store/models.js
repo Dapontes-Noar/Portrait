@@ -39,5 +39,9 @@ export const login = {
         dispatch.login.error('Invalid Username or password')
       }
     },
+    async logoutAsync() {
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      dispatch.login.logout()
+    },
   }),
 }

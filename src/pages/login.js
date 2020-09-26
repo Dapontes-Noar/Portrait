@@ -1,17 +1,16 @@
 import React, { useState, useRef } from 'react';
 
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
-import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
-const Login = ({ error, loginAsync }) => {
+const Login = ({ error, loginAsync, history }) => {
 
   const mailRef = useRef();
   const passwordRef = useRef();
 
-  let history = useHistory();
 
   const [mailError, setMailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -62,8 +61,6 @@ const Login = ({ error, loginAsync }) => {
 
             history.replace("/")
             window.localStorage.setItem('logged', true)
-
-
           }
         })
     }
@@ -160,4 +157,4 @@ const mapDispatch = (dispatch) => ({
   loginAsync: (data) => dispatch.login.loginAsync(data),
 })
 
-export default connect(mapState, mapDispatch)(Login)
+export default withRouter(connect(mapState, mapDispatch)(Login))
