@@ -15,7 +15,7 @@ Live on: https://portrait-test-oylri.ondigitalocean.app/login
 * React JS
 * React Rematch
 
-# PROJECT ARCHITECTURE
+## PROJECT ARCHITECTURE
 * I used [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) in this proyect. 
 
 ## INSTALACION
