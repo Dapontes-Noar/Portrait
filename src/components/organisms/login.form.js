@@ -29,7 +29,7 @@ const LoginForm = ({ loginAsync }) => {
         icon: "error",
         title: "Email can't empty or have a wrong format",
         showConfirmButton: false,
-        timer: 3000
+        timer: 1000
       });
     } else if (password.length === 0) {
       Swal.fire({
@@ -37,7 +37,7 @@ const LoginForm = ({ loginAsync }) => {
         icon: "error",
         title: "Password can't be empty",
         showConfirmButton: false,
-        timer: 3000
+        timer: 1000
       });
     } else {
       const user = {
@@ -53,7 +53,7 @@ const LoginForm = ({ loginAsync }) => {
             icon: "success",
             title: `Bienvenido ${user.email}`,
             showConfirmButton: false,
-            timer: 3000
+            timer: 1000
           });
           history.replace('/');
         }).catch((error) => {
@@ -62,7 +62,7 @@ const LoginForm = ({ loginAsync }) => {
             icon: "error",
             title: error.message,
             showConfirmButton: false,
-            timer: 3000
+            timer: 2000
           });
         })
     }
