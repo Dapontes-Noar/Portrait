@@ -14,6 +14,7 @@ Live on: https://portrait-test-oylri.ondigitalocean.app/login
 * Yarn v1.22.5
 * React JS
 * React Rematch
+* Sass
 
 ## PROJECT ARCHITECTURE
 * I used [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) in this proyect. 
@@ -21,7 +22,7 @@ Live on: https://portrait-test-oylri.ondigitalocean.app/login
 ## INSTALACION
 __Requirements__
 * Node v14
-* Yarn
+* Yarn v1.22.5
 
 First install the dependencies
 ``` shell script
@@ -47,3 +48,4 @@ Done! Happy Hacking!
 * [Yarn](https://yarnpkg.com/)
 * [React](https://es.reactjs.org/)
 * [Rematch](https://github.com/rematch/rematch)
+* [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
