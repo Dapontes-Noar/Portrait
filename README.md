@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Based on:
 [Figma design](https://www.figma.com/file/au1mAnavAczV1MmZegBvti/Challenge?node-id=0%3A1)
 
+Live on: https://portrait-test-oylri.ondigitalocean.app/login
+
 ## TECHNOLOGIES
 * Node v14
 * Yarn v1.22.5
