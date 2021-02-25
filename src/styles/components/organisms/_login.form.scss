@@ -1,0 +1,17 @@
+.login-form {
+  display: grid;
+  grid-row-gap: 200px;
+  margin: 20px;
+  width: 100%;
+
+  @media (min-width: $breakpoint-laptop){
+    width: 50%;
+  }
+}
+
+.login-form-template {
+  display: inline-grid;
+  grid-row-gap: 20px;
+
+  margin: 0 10px;
+}

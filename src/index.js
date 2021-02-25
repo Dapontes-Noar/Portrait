@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 // STYLES
-import './styles/index.scss'
+import './styles/index.scss';
 
 // REMATCH
 import { Provider } from 'react-redux'

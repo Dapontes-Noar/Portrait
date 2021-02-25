@@ -1,0 +1,25 @@
+.bg-color {
+  background: linear-gradient(240.82deg, $orange-color -0.07%, $magenta-color 54.53%, $purple-color 116.25%), $white-color;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-shapes {
+  background-image: url("../../assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+
+
+  @media (min-width: $breakpoint-laptop){ background-image: none; }
+}
+
+.login-template-container {
+  display: flex;
+  height: 100vh;
+}

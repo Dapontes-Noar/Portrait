@@ -1,0 +1,12 @@
+.spacer-container {
+  height: 3rem;
+  width: 100%;
+
+  @media (min-height: 500px){
+    height: 6rem;
+  }
+
+  @media (min-height: 700px){
+    height: 16rem;
+  }
+}

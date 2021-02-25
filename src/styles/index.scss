@@ -1,9 +1,24 @@
 // CORE
 @import 'core/variables';
 
+// COMPONENTS
+// ATOMS
+@import 'components/atoms/input';
+@import 'components/atoms/button';
+@import 'components/atoms/text';
+
+// Molecules
+@import 'components/molecules/hidden.input';
+
+// ORGANISMS
+@import 'components/organisms/login.form';
+@import 'components/organisms/spacer';
+
+// TEMPLATES
+@import 'templates/login.template';
+
 // PAGES
 @import 'pages/login';
-@import 'pages/home';
 
 * {
   font-family: $font-stack;
@@ -11,6 +26,7 @@
 
 body {
   margin: 0;
+  background-color: slategray;
 }
 
 a {
