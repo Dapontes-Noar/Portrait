@@ -1,13 +1,16 @@
 import React from 'react';
 
 // PAGES
-import Login from './pages/login'
+import Login from './pages/login';
+import Home from './pages/home';
+
 
 // REACT ROUTER
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 
@@ -18,8 +21,12 @@ function App({ auth }) {
   return (
     <Router>
       <Switch>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login />
+        </Route>
+
+        <Route path="/">
+          { !auth ? <Redirect to="/login" /> : <Home /> }
         </Route>
       </Switch>
     </Router>

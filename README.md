@@ -26,4 +26,9 @@ You can run with
 yarn run start
 ```
 
+MOCK USER
+```javascript
+{ email: 'example@mail.com', password: '123456' }
+```
+
 Done! Happy Hacking!
